@@ -29,7 +29,6 @@ pipeline {
         }
 
         stage('Test') {
-            parallel {
                 stage('Vérification électronique') {
                     steps {
                         echo "Vérification des systèmes électroniques"
@@ -73,7 +72,6 @@ pipeline {
         }
 
         stage('Deploy') {
-            parallel {
                 stage('Vérification des propulseurs') {
                     steps {
                         echo "Vérification de l'intégrité des propulseurs"
